@@ -1,3 +1,6 @@
+include:
+    - sudo_group
+
 {% for u, uinfo in pillar.get('users', {}).items() %}
 {{ u }}:
     group:
@@ -14,7 +17,7 @@
         - enforce_password: True
         - require:
             - group: {{ u }}
-            - group: sudo
+            - group: sudo_group
     ssh_auth:
         - present
         - user: {{ u }}
