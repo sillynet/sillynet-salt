@@ -1,6 +1,3 @@
-include:
-    - sudo
-
 {% for u, uinfo in pillar.get('users', {}).items() %}
 {{ u }}:
     group:

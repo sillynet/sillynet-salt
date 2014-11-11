@@ -1,4 +1,4 @@
 base:
     '*':
-        - sudo
+        - sudoers
         - users
